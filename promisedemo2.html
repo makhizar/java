@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function promise(completed)
+        {
+            return new Promise(function(success,reject)
+        {
+            setTimeout()
+if(completed)
+{
+    success("successfull");
+} 
+else
+{
+    reject("unseccessful");
+}
+        });
+        } 
+   
+       // console.log(promise);
+       let onfullfillment=(result)=>
+       {
+        console.log("fullfilled and "+result);
+       }
+       let onrejection=(result)=>
+       {
+        console.log("unfullfilled and "+result);
+       }
+    
+       promise(false).then(onfullfillment).catch(onrejection);
+    </script>
+</body>
+</html>
